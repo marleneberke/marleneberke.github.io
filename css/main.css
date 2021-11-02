@@ -51,12 +51,18 @@ ul.posts li {
 
 .column1 {
   width: 30%;
+  align-items:center;
+  justify-content:center;
 }
 .column2 {
   width: 40%;
+  align-items:center;
+  justify-content:center;
 }
 .column3 {
   width: 30%;
+  align-items:center;
+  justify-content:center;
 }
 
 @media screen and (max-width: 1425px) {
