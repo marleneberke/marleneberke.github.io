@@ -55,7 +55,25 @@ ul.posts li {
 .column2 {
   width: 40%;
 }
-
 .column3 {
   width: 30%;
+}
+
+@media screen and (max-width: 900px) {
+
+  .row{
+    display:block;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .column1, .column2, .column3 {
+    width: 100%;
+    display: block; 
+    float: none; 
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+  }
 }
