@@ -48,8 +48,12 @@ ul.posts li {
 }
 
 .column1 {
-  width: 34%;
+  width: 30%;
 }
 .column2 {
-  width: 66%;
+  width: 40%;
+}
+
+.column3 {
+  width: 30%;
 }
