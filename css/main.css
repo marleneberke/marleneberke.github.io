@@ -59,7 +59,7 @@ ul.posts li {
   width: 30%;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1350px) {
 
   .row{
     display:block;
