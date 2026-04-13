@@ -195,7 +195,7 @@ details.earlier-papers ul li { margin-bottom: 10px; }
 
 .home-layout {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 2.5rem;
   margin-top: 1.5rem;
 }
