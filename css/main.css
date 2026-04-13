@@ -21,11 +21,11 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #2a6496;
+    color: #b5762a;
 }
 a:hover {
     text-decoration: underline;
-    color: #1a4a70;
+    color: #8a5820;
 }
 h1 {
     font-size: 3em;
@@ -108,7 +108,7 @@ ul.posts li {
 
 .advocacy-read-more {
   font-size: 0.9em;
-  color: #2a6496;
+  color: #b5762a;
 }
 
 @media (max-width: 640px) {
