@@ -3,32 +3,6 @@ layout: default
 title: Research
 ---
 <style>
-    body {
-      background-image: url('background.png');
-    }
-    .research-line {
-        border-left: 5px solid;
-        padding-left: 20px;
-        margin-bottom: 40px;
-    }
-    .line-1 { border-color: #7F77DD; }
-    .line-2 { border-color: #D85A30; }
-    .line-3 { border-color: #1D9E75; }
-
-    .paper {
-        margin-bottom: 14px;
-    }
-    .paper-title {
-        font-weight: bold;
-    }
-    .paper-authors {
-        font-size: 0.88em;
-        font-style: italic;
-        color: #555;
-    }
-    .paper-venue {
-        font-size: 0.88em;
-    }
     .status-badge {
         display: inline-block;
         padding: 1px 7px;
@@ -39,32 +13,41 @@ title: Research
         letter-spacing: 0.4px;
         vertical-align: middle;
     }
-    .badge-inprep  { background: #f0eefa; color: #5a50b0; }
-    .badge-review  { background: #fff3e0; color: #a05000; }
-    .badge-inpress { background: #e8f5e9; color: #2e7d32; }
-    .badge-published { background: #e3f2fd; color: #1565c0; }
-    .badge-ongoing { background: #fce4ec; color: #880e4f; }
+    .badge-inprep  { background: #EAF3DE; color: #3B6D11; }
+    .badge-review  { background: #FAEEDA; color: #854F0B; }
+    .badge-inpress { background: #E6F1FB; color: #185FA5; }
 
-    .secondary-papers {
-        margin-top: 8px;
-        font-size: 0.9em;
+    .research-line {
+        border-left: 5px solid;
+        padding-left: 20px;
+        margin-bottom: 40px;
     }
-    .secondary-papers summary {
-        cursor: pointer;
-        color: #888;
-        font-style: italic;
+    .line-1 { border-color: #7F77DD; }
+    .line-2 { border-color: #D85A30; }
+    .line-3 { border-color: #1D9E75; }
+    .line-4 { border-color: #534AB7; }
+
+    .line-header {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+        margin-bottom: 16px;
     }
-    .secondary-papers .paper {
-        margin-top: 8px;
+    .line-text { flex: 1; }
+    .line-image { width: 320px; flex-shrink: 0; }
+    .line-image img {
+        width: 100%;
+        height: 220px;
+        object-fit: contain;
+        border-radius: 8px;
+        border: 0.5px solid #e0e0e0;
     }
 
-    .comp-cognition {
-        background: #f8f8f4;
-        border: 1px solid #d8d8cc;
-        border-radius: 6px;
-        padding: 20px 26px 20px 26px;
-        margin-top: 10px;
-    }
+    .paper { margin-bottom: 14px; }
+    .paper-title { font-weight: bold; }
+    .paper-authors { font-size: 0.88em; font-style: italic; color: #555; }
+    .paper-venue { font-size: 0.88em; }
+
     .subsection {
         border-left: 4px solid;
         padding-left: 16px;
@@ -73,6 +56,31 @@ title: Research
     .subsec-evol { border-color: #639922; }
     .subsec-nhp  { border-color: #BA7517; }
     .subsec-mach { border-color: #D4537E; }
+
+    .subsec-inner {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .subsec-papers { flex: 1; }
+    .subsec-image { width: 240px; flex-shrink: 0; }
+    .subsec-image img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        border-radius: 8px;
+        border: 0.5px solid #e0e0e0;
+    }
+
+    .secondary-papers { margin-top: 8px; font-size: 0.9em; }
+    .secondary-papers summary { cursor: pointer; color: #888; font-style: italic; }
+    .secondary-papers .paper { margin-top: 8px; }
+
+    @media screen and (max-width: 768px) {
+        .line-header, .subsec-inner { flex-direction: column; }
+        .line-image, .subsec-image { width: 100%; }
+        .line-image img, .subsec-image img { height: auto; }
+    }
 </style>
 
 <h1>Research</h1>
@@ -81,28 +89,35 @@ title: Research
 
 <hr>
 
-<!-- Line 1 -->
+<!-- Line 1: Theory of mind & cognitive processes -->
 <div class="research-line line-1">
-<h2>1. Theory of mind &amp; cognitive processes</h2>
-<p>How do people infer the unobservable contents of other minds — what others are thinking, knowing, or experiencing? I build computational models of these inferences, grounding them in Bayesian inverse reasoning and testing them behaviorally.</p>
+<div class="line-header">
+  <div class="line-text">
+    <h2>1. Theory of mind &amp; cognitive processes</h2>
+    <p>How do people infer the unobservable contents of other minds — what others are thinking, knowing, or experiencing? I build computational models of these inferences, grounding them in Bayesian inverse reasoning and testing them behaviorally.</p>
+  </div>
+  <div class="line-image">
+    <!-- IMAGE PLACEHOLDER: research/bir_fig1.png -->
+    <a href="https://osf.io/preprints/psyarxiv/gmwav_v1"><img src="research/bir_fig1.png" alt="BIR Figure 1 — search trees and Rush Hour puzzle states"></a>
+  </div>
+</div>
 
 <div class="paper">
   <span class="paper-title">Quantitative reconstruction of other people's cognitive processes as Bayesian inverse reasoning</span><br>
   <span class="paper-authors">Berke, Sterling, Tenenbaum, Jara-Ettinger</span>
-  <span class="status-badge badge-inprep">in prep</span>
+  <span class="status-badge badge-review">under review</span>
+  <a href="https://osf.io/preprints/psyarxiv/gmwav_v1">preprint</a>
 </div>
 
 <div class="paper">
   <span class="paper-title">No signatures of first-person biases in theory of mind judgments about thinking</span><br>
   <span class="paper-authors">Berke, Sterling, Tenenbaum, Jara-Ettinger</span> &middot; <span class="paper-venue">CogSci 2024</span>
-  <span class="status-badge badge-published">published</span>
   <a href="https://osf.io/q79bz/download">pdf</a>
 </div>
 
 <div class="paper">
   <span class="paper-title">Thinking about thinking as rational computation</span> <em>(and earlier related CogSci papers 2021&ndash;2023)</em><br>
   <span class="paper-authors">Berke, Tenenbaum, Sterling, Jara-Ettinger</span> &middot; <span class="paper-venue">CogSci 2023</span>
-  <span class="status-badge badge-published">published</span>
   <a href="https://psyarxiv.com/e65p3/download?format=pdf">pdf</a>
 </div>
 
@@ -121,29 +136,40 @@ title: Research
 </details>
 </div>
 
-<!-- Line 2 -->
+<!-- Line 2: ToM in communication -->
 <div class="research-line line-2">
-<h2>2. ToM in communication</h2>
-<p>Theory of mind is not just for passive observation — it shapes how we speak, deceive, trust, and attend. This line examines how people strategically deploy mental-state reasoning in communicative and social contexts, from lying to audience modeling to child development.</p>
+<div class="line-header">
+  <div class="line-text">
+    <h2>2. ToM in communication</h2>
+    <p>Theory of mind is not just for passive observation — it shapes how we speak, deceive, trust, and attend. This line examines how people strategically deploy mental-state reasoning in communicative and social contexts, from lying to audience modeling to child development.</p>
+  </div>
+  <div class="line-image">
+    <!-- IMAGE PLACEHOLDER: research/lying_fig.png -->
+    <img src="research/lying_fig.png" alt="Lying paper figure — sender/audience diagram with beliefs and desires">
+  </div>
+</div>
 
 <div class="paper">
   <span class="paper-title">Tracking minds in communication</span><br>
   <span class="paper-authors">Rubio-Fernandez, Berke, Jara-Ettinger</span> &middot; <span class="paper-venue"><em>Trends in Cognitive Sciences</em> 2024</span>
-  <span class="status-badge badge-published">published</span>
   <a href="https://www.sciencedirect.com/science/article/pii/S1364661324003127">link</a>
 </div>
 
 <div class="paper">
-  <span class="paper-title">People use theory of mind to craft lies exploiting audience desires</span><br>
+  <span class="paper-title">People tailor lies to what others know and want</span> <em>(full version)</em><br>
+  <span class="paper-authors">Berke, Sterling†, Zhi†, Chandra, Jara-Ettinger</span> <em>(† equal contribution)</em>
+  <span class="status-badge badge-review">under review</span>
+</div>
+
+<div class="paper">
+  <span class="paper-title">People use theory of mind to craft lies exploiting audience desires</span> <em>(proceedings)</em><br>
   <span class="paper-authors">Berke*, Sterling*, Chandra, Jara-Ettinger</span> &middot; <span class="paper-venue">CogSci 2025</span> <em>(* equal contribution)</em>
-  <span class="status-badge badge-published">published</span>
   <a href="https://files.osf.io/v1/resources/a65f3_v1/providers/osfstorage/681f699d81f56bc071ce9e03?action=download&direct&version=1">link</a>
 </div>
 
 <div class="paper">
   <span class="paper-title">Six-year-olds use an intuitive theory of attention to infer what others see, whom to trust, and what they want</span><br>
   <span class="paper-authors">Zhang, Berke, Jara-Ettinger</span> &middot; <span class="paper-venue">CogSci 2025</span>
-  <span class="status-badge badge-published">published</span>
   <a href="https://osf.io/cpd7u/download">link</a>
 </div>
 
@@ -162,15 +188,22 @@ title: Research
 </details>
 </div>
 
-<!-- Line 3 -->
+<!-- Line 3: ToM in the wild -->
 <div class="research-line line-3">
-<h2>3. ToM in the wild: pain, bodies &amp; medicine</h2>
-<p>How do people reason about others' pain and bodily states? Deploying ToM in clinical and social contexts reveals systematic biases and failures — with direct consequences for how pain is believed, dismissed, and treated across patient groups.</p>
+<div class="line-header">
+  <div class="line-text">
+    <h2>3. ToM in the wild: pain, bodies &amp; medicine</h2>
+    <p>How do people reason about others' pain and bodily states? Deploying ToM in clinical and social contexts reveals systematic biases and failures — with direct consequences for how pain is believed, dismissed, and treated across patient groups.</p>
+  </div>
+  <div class="line-image">
+    <!-- IMAGE PLACEHOLDER: research/bodily_core_knowledge_fig1.png -->
+    <img src="research/bodily_core_knowledge_fig1.png" alt="Bodily Core Knowledge figure — visual and bodily perception engravings">
+  </div>
+</div>
 
 <div class="paper">
   <span class="paper-title">Toward a formalization of human intuitive theories of bodily pain</span><br>
   <span class="paper-authors">Berke, Collins, Tenenbaum, Saxe</span> &middot; <span class="paper-venue">CogSci 2026</span>
-  <span class="status-badge badge-review">under review</span>
 </div>
 
 <div class="paper">
@@ -182,14 +215,13 @@ title: Research
 <div class="paper">
   <span class="paper-title">Key outcomes of the vulvodynia therapeutic research summit</span><br>
   <span class="paper-authors">Krapf, Yong, Berke et al.</span> &middot; <span class="paper-venue"><em>Obstetrics &amp; Gynecology</em> 2025</span>
-  <span class="status-badge badge-published">published</span>
   <a href="https://journals.lww.com/greenjournal/abstract/9900/executive_summary_of_the_vulvodynia_therapeutic.1399.aspx">link</a>
 </div>
 </div>
 
-<!-- Comparative Cognition -->
-<div class="comp-cognition">
-<h2>Comparative cognition</h2>
+<!-- Line 4: Comparative cognition -->
+<div class="research-line line-4">
+<h2>4. Comparative cognition</h2>
 <p><em>What representations does a system need for intelligent behavior?</em></p>
 <p>A parallel thread uses evolutionary simulations, non-human animals, and artificial systems as mirrors for human cognition — probing what computational machinery is necessary and sufficient to produce human-like reasoning about minds, objects, and the physical world.</p>
 
@@ -198,38 +230,45 @@ title: Research
 <div class="paper">
   <span class="paper-title">Flexible goals require that inflexible perceptual systems produce veridical representations: implications for realism as revealed by evolutionary simulations</span><br>
   <span class="paper-authors">Berke, Walter-Terrill, Jara-Ettinger, Scholl</span> &middot; <span class="paper-venue"><em>Cognitive Science</em> 2022</span>
-  <span class="status-badge badge-published">published</span>
   <a href="https://github.com/marleneberke/marleneberke.github.io/raw/main/FlexibleGoals.pdf">pdf</a>
 </div>
 </div>
 
 <div class="subsection subsec-nhp">
 <h3>In non-human primates</h3>
-<div class="paper">
-  <span class="paper-title">What primates know about other minds and when they use it: a computational approach to comparative theory of mind</span><br>
-  <span class="paper-authors">Berke*, Horschler*, Royka, Santos, Jara-Ettinger</span> <em>(* equal contribution)</em>
-  <span class="status-badge badge-review">under review</span>
-  <a href="https://www.biorxiv.org/content/10.1101/2023.08.02.551487v1.full.pdf">preprint</a>
-</div>
-<div class="paper">
-  <span class="paper-title">Monkeys fail inference versions of classic intuitive physics prediction tasks</span><br>
-  <span class="paper-authors">Royka, Townrow, Baker, Berke, Santos</span>
-  <span class="status-badge badge-review">under review</span>
+<div class="subsec-inner">
+  <div class="subsec-papers">
+    <div class="paper">
+      <span class="paper-title">What primates know about other minds and when they use it: a computational approach to comparative theory of mind</span><br>
+      <span class="paper-authors">Berke*, Horschler*, Royka, Santos, Jara-Ettinger</span> <em>(* equal contribution)</em>
+      <span class="status-badge badge-review">under review</span>
+      <a href="https://www.biorxiv.org/content/10.1101/2023.08.02.551487v1.full.pdf">preprint</a>
+    </div>
+    <div class="paper">
+      <span class="paper-title">Monkeys fail inference versions of classic intuitive physics prediction tasks</span><br>
+      <span class="paper-authors">Royka, Townrow, Baker, Berke, Santos</span> &middot; <span class="paper-venue">CogSci 2026</span>
+    </div>
+  </div>
+  <div class="subsec-image">
+    <!-- IMAGE PLACEHOLDER: research/nhp_tom_fig.png -->
+    <img src="research/nhp_tom_fig.png" alt="NHP ToM model figure — 7-panel grid of computational models">
+  </div>
 </div>
 </div>
 
 <div class="subsection subsec-mach">
 <h3>In machines</h3>
-<div class="paper">
-  <span class="paper-title">MetaCOG: a hierarchical probabilistic model for learning meta-cognitive visual representations</span><br>
-  <span class="paper-authors">Berke, Azerbayev, Belledonne, Tavares, Jara-Ettinger</span> &middot; <span class="paper-venue">UAI 2024</span>
-  <span class="status-badge badge-published">published</span>
-  <a href="https://proceedings.mlr.press/v244/berke24a.html">link</a> &middot; <a href="https://github.com/marleneberke/marleneberke.github.io/raw/main/berke24a.pdf">pdf</a>
-</div>
-<div class="paper">
-  <span class="paper-title">AI-assisted clinical reasoning</span> <em>(with Katie Collins)</em><br>
-  <span class="paper-authors">Applying probabilistic models to medical decision support</span>
-  <span class="status-badge badge-ongoing">ongoing</span>
+<div class="subsec-inner">
+  <div class="subsec-papers">
+    <div class="paper">
+      <span class="paper-title">MetaCOG: a hierarchical probabilistic model for learning meta-cognitive visual representations</span><br>
+      <span class="paper-authors">Berke, Azerbayev, Belledonne, Tavares, Jara-Ettinger</span> &middot; <span class="paper-venue">UAI 2024</span>
+      <a href="https://proceedings.mlr.press/v244/berke24a.html">link</a> &middot; <a href="https://github.com/marleneberke/marleneberke.github.io/raw/main/berke24a.pdf">pdf</a>
+    </div>
+  </div>
+  <div class="subsec-image">
+    <a href="/demos_page"><img src="research/metacog_demo.gif" alt="MetaCOG model demo animation" style="width:100%; height:180px; object-fit:cover; border-radius:8px; border:0.5px solid #e0e0e0;"></a>
+  </div>
 </div>
 </div>
 
