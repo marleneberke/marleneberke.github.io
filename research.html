@@ -34,10 +34,8 @@ title: Research
         margin-bottom: 16px;
     }
     .line-text { flex: 1; }
-    .line-image { width: 320px; flex-shrink: 0; }
+    .line-image { flex-shrink: 0; }
     .line-image img {
-        width: 100%;
-        height: 220px;
         object-fit: contain;
         border-radius: 8px;
         border: 0.5px solid #e0e0e0;
@@ -63,17 +61,18 @@ title: Research
         align-items: flex-start;
     }
     .subsec-papers { flex: 1; }
-    .subsec-image { width: 240px; flex-shrink: 0; }
+    .subsec-image { flex-shrink: 0; }
     .subsec-image img {
-        width: 100%;
-        height: 180px;
         object-fit: contain;
         border-radius: 8px;
         border: 0.5px solid #e0e0e0;
     }
 
     .secondary-papers { margin-top: 8px; font-size: 0.9em; }
-    .secondary-papers summary { cursor: pointer; color: #888; font-style: italic; }
+    .secondary-papers summary { cursor: pointer; color: #888; font-style: italic; list-style: none; }
+    .secondary-papers summary::-webkit-details-marker { display: none; }
+    .secondary-papers summary::before { content: "▶ "; font-size: 0.75em; font-style: normal; }
+    details.secondary-papers[open] summary::before { content: "▼ "; font-size: 0.75em; font-style: normal; }
     .secondary-papers .paper { margin-top: 8px; }
 
     @media screen and (max-width: 768px) {
@@ -85,7 +84,7 @@ title: Research
 
 <h1>Research</h1>
 
-<p>My research uses computational modeling and behavioral experiments to understand how people reason about other minds. I'm especially interested in the mechanisms underlying theory of mind — how we infer what others are thinking, feeling, and experiencing — and what happens when these mechanisms are deployed in high-stakes real-world contexts like clinical care.</p>
+<p>My research uses computational modeling and behavioral experiments to understand how people reason about other minds. I'm especially interested in the representations and computations underlying theory of mind — how we infer what others are thinking, feeling, and experiencing — and what happens when they are deployed in high-stakes real-world contexts like clinical care.</p>
 
 <hr>
 
@@ -94,11 +93,11 @@ title: Research
 <div class="line-header">
   <div class="line-text">
     <h2>1. Theory of mind &amp; cognitive processes</h2>
-    <p>How do people infer the unobservable contents of other minds — what others are thinking, knowing, or experiencing? I build computational models of these inferences, grounding them in Bayesian inverse reasoning and testing them behaviorally.</p>
+    <p>How do people infer the unobservable contents of other minds — what others are thinking, remembering, or experiencing? I build computational cognitive models of these inferences and test them behaviorally.</p>
   </div>
   <div class="line-image">
     <!-- IMAGE PLACEHOLDER: research/bir_fig1.png -->
-    <a href="https://osf.io/preprints/psyarxiv/gmwav_v1"><img src="research/bir_fig1.png" alt="BIR Figure 1 — search trees and Rush Hour puzzle states"></a>
+    <a href="https://osf.io/preprints/psyarxiv/gmwav_v1"><img src="research/bir_fig1.png" alt="BIR Figure 1 — search trees and Rush Hour puzzle states" style="width:380px; object-fit:contain;"></a>
   </div>
 </div>
 
@@ -156,17 +155,17 @@ title: Research
 <div class="line-header">
   <div class="line-text">
     <h2>2. ToM in communication</h2>
-    <p>Theory of mind is not just for passive observation — it shapes how we speak, deceive, trust, and attend. This line examines how people strategically deploy mental-state reasoning in communicative and social contexts, from lying to audience modeling to child development.</p>
+    <p>Theory of mind is not just for passive observation. It shapes how we interact, communicate, and even deceive. This line examines how people strategically deploy mental-state reasoning during communication and deception.</p>
   </div>
   <div class="line-image">
     <!-- IMAGE PLACEHOLDER: research/lying_fig.png -->
-    <img src="research/lying_fig.png" alt="Lying paper figure — sender/audience diagram with beliefs and desires">
+    <img src="research/lying_fig.png" alt="Lying paper figure — sender/audience diagram with beliefs and desires" style="width:320px;">
   </div>
 </div>
 
 <div class="paper">
   <span class="paper-title">People tailor lies to what others know and want</span> <em>(full version)</em><br>
-  <span class="paper-authors">Berke, Sterling†, Zhi Yi†, Chandra, Jara-Ettinger</span> <em>(† equal contribution)</em>
+  <span class="paper-authors">Berke, Sterling*, Zhi Yi*, Chandra, Jara-Ettinger</span> <em>(* equal contribution)</em>
   <span class="status-badge badge-review">under review</span>
 </div>
 
@@ -192,27 +191,18 @@ title: Research
   <a href="https://www.sciencedirect.com/science/article/pii/S1364661324003127">link</a>
 </div>
 
-<details class="secondary-papers">
-  <summary>More papers in this line&hellip;</summary>
-  <div style="margin-top:8px;">
-    <div class="paper">
-      <span class="paper-authors">Shachnai*, Kleiman-Weiner*, Berke, Leonard</span> &middot; When Bayesians take over: a computational model of parental intervention &middot; <span class="paper-venue">CogSci 2024</span>
-      <a href="https://escholarship.org/content/qt1q346255/qt1q346255.pdf">link</a>
-    </div>
-  </div>
-</details>
 </div>
 
 <!-- Line 3: ToM in the wild -->
 <div class="research-line line-3">
 <div class="line-header">
   <div class="line-text">
-    <h2>3. ToM in the wild: pain, bodies &amp; medicine</h2>
-    <p>How do people reason about others' pain and bodily states? Deploying ToM in clinical and social contexts reveals systematic biases and failures — with direct consequences for how pain is believed, dismissed, and treated across patient groups.</p>
+    <h2>3. ToM in the wild: Reasoning about pain, bodies &amp; medicine</h2>
+    <p>Attributing pain to someone else relies on both our theory of mind (what did they mean when they said, "it hurts like...") and our intuitive theory of how pain works. These intuitive theories of mind and body have direct consequences for how pain and stigmatized conditions are believed, dismissed, and treated in healthcare interactions.</p>
   </div>
   <div class="line-image">
     <!-- IMAGE PLACEHOLDER: research/bodily_core_knowledge_fig1.png -->
-    <img src="research/bodily_core_knowledge_fig1.png" alt="Bodily Core Knowledge figure — visual and bodily perception engravings">
+    <img src="research/bodily_core_knowledge_fig1.png" alt="Bodily Core Knowledge figure — visual and bodily perception engravings" style="width:360px;">
   </div>
 </div>
 
@@ -238,7 +228,7 @@ title: Research
 <div class="research-line line-4">
 <h2>4. Comparative cognition</h2>
 <p><em>What representations does a system need for intelligent behavior?</em></p>
-<p>A parallel thread uses evolutionary simulations, non-human animals, and artificial systems as mirrors for human cognition — probing what computational machinery is necessary and sufficient to produce human-like reasoning about minds, objects, and the physical world.</p>
+<p>A parallel thread uses evolutionary simulations, non-human primates, and artificial systems as mirrors for human cognition, allowing us to probe the kinds of representations that support intelligent behavior in the social and physical worlds.</p>
 
 <div class="subsection subsec-evol">
 <h3>In evolutionary simulations</h3>
@@ -266,7 +256,7 @@ title: Research
   </div>
   <div class="subsec-image">
     <!-- IMAGE PLACEHOLDER: research/nhp_tom_fig.png -->
-    <img src="research/nhp_tom_fig.png" alt="NHP ToM model figure — 7-panel grid of computational models">
+    <img src="research/nhp_tom_fig.png" alt="NHP ToM model figure — 7-panel grid of computational models" style="width:400px;">
   </div>
 </div>
 </div>
@@ -282,7 +272,7 @@ title: Research
     </div>
   </div>
   <div class="subsec-image">
-    <a href="/demos_page"><img src="research/metacog_demo.gif" alt="MetaCOG model demo animation" style="width:100%; height:180px; object-fit:cover; border-radius:8px; border:0.5px solid #e0e0e0;"></a>
+    <a href="/demos_page"><img src="research/metacog_demo.gif" alt="MetaCOG model demo animation" style="width:300px; max-height:220px; object-fit:contain; border-radius:8px; border:0.5px solid #e0e0e0;"></a>
   </div>
 </div>
 </div>

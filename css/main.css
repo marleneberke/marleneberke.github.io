@@ -21,15 +21,18 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #bb8f60;
+    color: #2a6496;
 }
 a:hover {
     text-decoration: underline;
+    color: #1a4a70;
 }
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family: 'Lato', sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Lato', sans-serif !important; }
 p {
     font-size: 1.5em;
     line-height: 1.4em;
@@ -105,7 +108,7 @@ ul.posts li {
 
 .advocacy-read-more {
   font-size: 0.9em;
-  color: #888;
+  color: #2a6496;
 }
 
 @media (max-width: 640px) {
@@ -152,39 +155,24 @@ ul.posts li {
 }
 
 details.earlier-papers {
-  margin-top: 6px;
-  margin-bottom: 4px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-left: 1.25rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid #e0e0e0;
 }
-
 details.earlier-papers summary {
   cursor: pointer;
-  font-size: 0.9em;
-  color: #888;
+  font-size: 0.85em;
+  color: #aaa;
   list-style: none;
+  font-style: italic;
 }
-
-details.earlier-papers summary::-webkit-details-marker {
-  display: none;
-}
-
-details.earlier-papers summary::before {
-  content: "▶ ";
-}
-
-details.earlier-papers[open] summary::before {
-  content: "▼ ";
-}
-
-details.earlier-papers ul {
-  margin-top: 8px;
-  padding-left: 1.2em;
-  font-size: 0.9em;
-  color: #555;
-}
-
-details.earlier-papers ul li {
-  margin-bottom: 8px;
-}
+details.earlier-papers summary::-webkit-details-marker { display: none; }
+details.earlier-papers summary::before { content: "▶ "; font-size: 0.75em; font-style: normal; }
+details.earlier-papers[open] summary::before { content: "▼ "; font-size: 0.75em; font-style: normal; }
+details.earlier-papers ul { margin-top: 8px; padding-left: 0; font-size: 0.9em; color: #555; list-style: none; }
+details.earlier-papers ul li { margin-bottom: 10px; }
 
 @media screen and (max-width: 1425px) {
 
@@ -225,5 +213,23 @@ details.earlier-papers ul li {
   .home-photo {
     width: 100%;
     max-width: 300px;
+  }
+}
+
+.cv-embed-container {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.cv-embed {
+  width: 100%;
+  height: 90vh;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  .cv-embed {
+    height: 70vh;
   }
 }
