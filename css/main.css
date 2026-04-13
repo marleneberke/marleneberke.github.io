@@ -2,6 +2,11 @@ body {
     margin: 60px auto;
     width: 70%;
     background-color: #ffffff;
+    font-family: 'Lato', sans-serif;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, a, li, td, th, blockquote {
+  font-family: 'Lato', sans-serif;
 }
 
 nav ul, footer ul {
@@ -191,11 +196,34 @@ details.earlier-papers ul li {
 
   .column1, .column2, .column3 {
     width: 100%;
-    display: block; 
-    float: none; 
+    display: block;
+    float: none;
     align-items:center;
     justify-content:center;
     text-align:center;
 
+  }
+}
+
+.home-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.home-photo {
+  width: 260px;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  .home-layout {
+    flex-direction: column;
+  }
+  .home-photo {
+    width: 100%;
+    max-width: 300px;
   }
 }
