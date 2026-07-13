@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>An Intuitive Theory of Pain — Links</title>
+<meta name="description" content="Pre-print and interactive data visualization for 'An Intuitive Theory of Pain' (CogSci 2026).">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --muted: #5b6172;
+    --line: #e4e7ee;
+    --accent: #2f3e73;
+    --accent-dark: #26315c;
+    --bg: #f6f7fa;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px 60px;
+    line-height: 1.5;
+  }
+  .wrap { width: 100%; max-width: 720px; }
+  header { text-align: center; margin-bottom: 40px; }
+  h1 { font-size: 1.7rem; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 1rem; margin: 0; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .18s ease, transform .18s ease, border-color .18s ease;
+  }
+  .card:hover {
+    box-shadow: 0 10px 30px rgba(26,26,46,.12);
+    transform: translateY(-3px);
+    border-color: #c9cfdd;
+  }
+  .thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #eef0f5;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+  }
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+  .thumb .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9aa1b2;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 16px;
+  }
+  .body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+  .kicker {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: .09em;
+    color: var(--muted); margin: 0 0 5px;
+  }
+  .card h2 { font-size: 1.12rem; margin: 0 0 6px; }
+  .card p { margin: 0 0 16px; color: var(--muted); font-size: 0.9rem; flex: 1; }
+  .btn {
+    align-self: flex-start;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: 8px;
+  }
+  .card:hover .btn { background: var(--accent-dark); }
+  footer { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 34px; }
+  @media (max-width: 560px) {
+    .grid { grid-template-columns: 1fr; }
+    h1 { font-size: 1.45rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>An Intuitive Theory of Pain</h1>
+      <p class="sub">CogSci 2026 &middot; Marlene Berke, MIT</p>
+    </header>
+
+    <div class="grid">
+      <a class="card" href="https://marleneberke.shinyapps.io/intuitive_theory_of_pain_browser/" target="_blank" rel="noopener">
+        <div class="thumb">
+          <img src="preview_viz.png" alt="Preview of the interactive data visualization"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="placeholder" style="display:none;">Screenshot of the data viz goes here<br>(preview_viz.png)</div>
+        </div>
+        <div class="body">
+          <p class="kicker">Interactive data</p>
+          <h2>Explore the results</h2>
+          <p>Browse the behavioral data in an interactive Shiny app.</p>
+          <span class="btn">Open visualization &rarr;</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://osf.io/preprints/psyarxiv/nhgq9_v1" target="_blank" rel="noopener">
+        <div class="thumb">
+          <img src="preview_preprint.png" alt="Preview of the pre-print"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="placeholder" style="display:none;">Screenshot of the pre-print goes here<br>(preview_preprint.png)</div>
+        </div>
+        <div class="body">
+          <p class="kicker">Pre-print</p>
+          <h2>Read the paper</h2>
+          <p>Full CogSci 2026 proceedings paper (PsyArXiv / OSF), covering Experiment&nbsp;2.</p>
+          <span class="btn">Open pre-print &rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <footer>berkem@mit.edu</footer>
+  </div>
+</body>
+</html>
