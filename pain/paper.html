@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toward a Formalization of Human Intuitive Theories of Bodily Pain</title>
+<meta name="description" content="Preprint: Toward a Formalization of Human Intuitive Theories of Bodily Pain. Berke, Collins, Tenenbaum, & Saxe. Manuscript under review.">
+
+<!-- Google Scholar / Highwire Press metadata tags -->
+<meta name="citation_title" content="Toward a Formalization of Human Intuitive Theories of Bodily Pain">
+<meta name="citation_author" content="Berke, Marlene D.">
+<meta name="citation_author" content="Collins, Katherine M.">
+<meta name="citation_author" content="Tenenbaum, Joshua B.">
+<meta name="citation_author" content="Saxe, Rebecca">
+<meta name="citation_publication_date" content="2026/07/22">
+<meta name="citation_pdf_url" content="https://marleneberke.github.io/pain/Intuitive_Theory_of_Pain.pdf">
+<meta name="citation_abstract_html_url" content="https://marleneberke.github.io/pain/paper.html">
+<meta name="citation_keywords" content="social cognition; intuitive theories; computational modeling; intuitive medicine; Bayesian modeling; mind-body problem; theory of mind; pain">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:title" content="Toward a Formalization of Human Intuitive Theories of Bodily Pain">
+<meta property="og:description" content="Preprint by Berke, Collins, Tenenbaum, & Saxe. Manuscript under review.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://marleneberke.github.io/pain/paper.html">
+<meta property="og:image" content="https://marleneberke.github.io/pain/preview_preprint.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --muted: #5b6172;
+    --line: #e4e7ee;
+    --accent: #2f3e73;
+    --accent-dark: #26315c;
+    --bg: #f6f7fa;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px 60px;
+    line-height: 1.6;
+  }
+  .wrap { width: 100%; max-width: 720px; }
+  .back { display: inline-block; margin-bottom: 24px; color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+  .back:hover { color: var(--accent); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 32px 36px;
+  }
+  .status {
+    display: inline-block;
+    background: #EEEDFE;
+    color: #534AB7;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin-bottom: 14px;
+  }
+  h1 { font-size: 1.5rem; line-height: 1.3; margin: 0 0 10px; letter-spacing: -0.01em; }
+  .authors { color: var(--muted); font-size: 0.98rem; margin: 0 0 4px; }
+  .affil { color: var(--muted); font-size: 0.82rem; margin: 0 0 22px; }
+  h2 { font-size: 1rem; margin: 24px 0 8px; }
+  .abstract { color: #333; font-size: 0.95rem; }
+  .keywords { color: var(--muted); font-size: 0.85rem; margin-top: 10px; }
+  .downloads { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .btn:hover { background: var(--accent-dark); }
+  .btn.secondary {
+    background: #fff;
+    color: var(--accent) !important;
+    border: 1px solid var(--line);
+  }
+  .btn.secondary:hover { background: #f0f1f5; }
+  footer { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 34px; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/pain/">&larr; Back to project links</a>
+
+    <div class="card">
+      <span class="status">Under review</span>
+      <h1>Toward a Formalization of Human Intuitive Theories of Bodily Pain</h1>
+      <p class="authors">Marlene D. Berke, Katherine M. Collins, Joshua B. Tenenbaum, &amp; Rebecca Saxe</p>
+      <p class="affil">McGovern Institute for Brain Research, MIT &middot; Dept. of Brain &amp; Cognitive Sciences, MIT &middot; Princeton AI Lab &middot; Cambridge Centre for Human-Inspired AI</p>
+
+      <h2>Abstract</h2>
+      <p class="abstract">Pain is a private, subjective experience, yet observers routinely make consequential judgments about another person's pain (e.g., whether it warrants treatment, accommodation, or whether it's real at all). How do observers make these judgments? We propose that people attribute pain through an intuitive theory&mdash;the same kind of theory they use to infer other hidden mental and physical states. We explore the structure of people's intuitive theory of pain by formalizing competing conceptions of pain: from pain resulting from bodily damage observable through physical evidence to pain as a subjective experience known only via self-report. Each theory is formalized as a causal model that predicts how people interpret naturalistic vignettes drawn from Reddit posts and medical training materials. Three experiments probe classical signatures of Bayesian causal reasoning: predicting pain from physical evidence (Experiment 1), inferring and treating pain (Experiment 2), and inferring a hidden cause (ulterior motives) that explains away inflated pain reports (Experiment 3). Across all three, a causal model that integrates over physical and mental states best captures human behavior and generalizes across eight categories of bodily pain, from headaches to finger burns. These results are consistent with our proposal that people have an intuitive theory of pain arising from problems in the body, and this theory supports quantitative causal reasoning. As a direct consequence of this intuitive theory, lay people view pain reports that lack corroborating physical evidence with suspicion. This work is a first step toward a quantitative, scientific model of folk intuitive theories of pain.</p>
+      <p class="keywords"><em>Keywords:</em> social cognition, intuitive theories, computational modeling, intuitive medicine, Bayesian modeling, mind-body problem, theory of mind, pain</p>
+
+      <div class="downloads">
+        <a class="btn" href="/pain/Intuitive_Theory_of_Pain.pdf" target="_blank">Download full paper (PDF)</a>
+        <a class="btn secondary" href="/pain/Intuitive_Theory_of_Pain_SM.pdf" target="_blank">Supplementary materials (PDF)</a>
+      </div>
+    </div>
+
+    <footer>Marlene Berke &middot; <a href="mailto:berkem@mit.edu">berkem@mit.edu</a></footer>
+  </div>
+</body>
+</html>
